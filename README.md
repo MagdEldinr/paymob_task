@@ -1,18 +1,4 @@
-# Paymob task
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#built-with">Built With</a></li>
-
-    <li>
-      <a href="#installation">Installation</a>
-    </li>
-    <li><a href="#testing">Testing</a></li>
-    <li><a href="#deployment">Deployment</a></li>
-  </ol>
-</details>
+# task
 
 ### Built With
 
