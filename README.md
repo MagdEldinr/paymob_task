@@ -30,7 +30,7 @@
   Key | Values | Matching Percentage
   :------------ | :-------------| :-------------|
   Key 1 | Value 250 | 88.8 % |
-  | Value 300 | 51 % |
+   ,| Value 300 | 51 % |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
