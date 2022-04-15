@@ -3,13 +3,12 @@ from django.http import HttpResponse
 from rest_framework.throttling import AnonRateThrottle
 from rest_framework.decorators import throttle_classes, api_view
 
-from .models import Medicine
-from .helpers import get_key_values_similarity
+from .utilities.helpers import get_key_values_similarity, load_column_from_dataset
 
 @api_view(['GET'])
 @throttle_classes([AnonRateThrottle])
 def index(request):
-    keys = Medicine.objects.all().values('key')
+    keys = load_column_from_dataset('Key')
     template = loader.get_template('home.html')
     context = {
         'keys': keys,
