@@ -4,12 +4,8 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-task">About The task</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
+    <li><a href="#built-with">Built With</a></li>
+
     <li>
       <a href="#installation">Installation</a>
     </li>
@@ -17,22 +13,6 @@
     <li><a href="#deployment">Deployment</a></li>
   </ol>
 </details>
-
-<!-- ABOUT THE Task -->
-
-## About The Task
-
-- We have 1 data about medicines with the follow schema
-  - One of them is KEY and another is Values.
-- We are aiming to find all similar values of a selected key and the percentage of these similarities (text-matching).
-
-- To Do: - User must select the key, once the user clicks search you will view all similar values for that key text which have more than 50% of matching percentage. - First View - Create simple interface that contains drop-down list with all keys from the file and a search button. - Second View - Create simple table to list all of the results for example
-  Key | Values | Matching Percentage
-  :------------ | :-------------| :-------------|
-  Key 1 | Value 250 | 88.8 % |
-   ,| Value 300 | 51 % |
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
