@@ -55,4 +55,4 @@ python manage.py test
 
 ## Deployment
 
-1. App is deploy on Heroku & you can check using this [link](https://serene-springs-42525.herokuapp.com/)
+1. App is deploy on Heroku & you can check using this [link](https://fierce-mesa-23241.herokuapp.com/)
