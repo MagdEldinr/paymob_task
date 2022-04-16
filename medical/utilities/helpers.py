@@ -6,7 +6,7 @@ from .csv_handler import load_column_from_dataset
 def get_key_values_similarity(key):
     similar_values = []
     for value in load_column_from_dataset('Values'):
-        similarity_ratio = process_tfidf_similarity(key.split(), value.split())
+        similarity_ratio = get_similarity_algorithm(key.split(), value.split())
         if similarity_ratio > 50:
             similar_values.append(
                 {
