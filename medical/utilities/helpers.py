@@ -4,7 +4,7 @@ def get_key_values_similarity(key):
     similar_values = []
     for value in load_column_from_dataset('Values'):
         similarity_ratio = get_similarity_algorithm(key.split(), value.split())
-        if similarity_ratio > 5:
+        if similarity_ratio > 50:
             similar_values.append(
                 {
                     "value": value,
