@@ -1,9 +1,12 @@
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
 from .csv_handler import load_column_from_dataset
 
-def get_key_values_similarity(key):
+def filter_by_similarity(key):
     similar_values = []
     for value in load_column_from_dataset('Values'):
-        similarity_ratio = get_similarity_algorithm(key.split(), value.split())
+        similarity_ratio = calculate_similarity(key, value)
         if similarity_ratio > 50:
             similar_values.append(
                 {
@@ -13,8 +16,8 @@ def get_key_values_similarity(key):
             )
     return similar_values
 
-def get_similarity_algorithm(first_text, second_text):
-    intersection_score = len(set.intersection(*[set(first_text), set(second_text)]))
-    union_score = len(set.union(*[set(first_text), set(second_text)]))
-    return intersection_score/float(union_score) * 100
-
+def calculate_similarity(first_text, second_text):
+    vectorizer = TfidfVectorizer()
+    embeddings = vectorizer.fit_transform([first_text, second_text])
+    similarities = cosine_similarity(embeddings[0:1], embeddings[1:]).flatten()
+    return similarities[0] * 100
