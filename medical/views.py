@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from rest_framework.throttling import AnonRateThrottle
 from rest_framework.decorators import throttle_classes, api_view
 
-from .utilities.helpers import filter_by_similarity, load_column_from_dataset
+from .utilities.helpers import get_key_values_similarity, load_column_from_dataset
 
 @api_view(['GET'])
 @throttle_classes([AnonRateThrottle])
@@ -20,7 +20,7 @@ def index(request):
 @throttle_classes([AnonRateThrottle])
 def result(request):
     key = request.GET.get('keys')
-    result = filter_by_similarity(key=key)
+    result = get_key_values_similarity(key=key)
     context = {
         'key': key,
         'result': result,

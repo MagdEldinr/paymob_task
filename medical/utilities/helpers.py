@@ -1,6 +1,3 @@
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-
 from .csv_handler import load_column_from_dataset
 
 def get_key_values_similarity(key):
