@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("SECRETKEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG") == "TRUE"
+DEBUG = False
 
 ALLOWED_HOSTS = ['*', ]
 
@@ -79,7 +79,8 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_THROTTLE_RATES': {
         'anon': '5/minute',
-    }
+    },
+    'EXCEPTION_HANDLER': 'my_project.my_app.utils.custom_exception_handler'
 }
 
 # Database

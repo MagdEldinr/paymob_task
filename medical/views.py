@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
 from rest_framework.throttling import AnonRateThrottle
@@ -26,3 +27,9 @@ def result(request):
     }
     template = loader.get_template('result.html')
     return HttpResponse(template.render(context, request))
+
+def throtlling(request, exception):
+    return render(request, 'errors/429.html')
+
+def server_error(request):
+    return render(request, 'errors/429.html')

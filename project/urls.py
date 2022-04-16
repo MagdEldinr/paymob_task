@@ -20,3 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('medical.urls'))
 ]
+
+handler429 = 'medical.views.throtlling'
+handler500 = 'medical.views.server_error'
