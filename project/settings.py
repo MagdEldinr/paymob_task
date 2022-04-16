@@ -80,6 +80,7 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
         'anon': '5/minute',
     },
+    'EXCEPTION_HANDLER': 'medical.utilities.exceptions'
 }
 
 # Database
