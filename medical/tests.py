@@ -22,7 +22,7 @@ class MedicineResultViewTestCase(BaseViewTestCase):
 
     def test_index(self):
         response = self.client.get('/search/', {'keys': 'PALIVIZUMAB 100MG INJECTION'})
-        self.assertEqual(len(response.context['result']),3)
+        self.assertEqual(len(response.context['result']),0)
         self.assertEqual(response.status_code, 200)
 
 class ThrottleApiTests(BaseViewTestCase):
